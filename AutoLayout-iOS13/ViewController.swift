@@ -21,12 +21,13 @@ class ViewController: UIViewController {
         diceImageView2.image = self.allDice[Int.random(in: 0...5)]
     }
     
-    @IBAction func rollButtonPressed(_ sender: UIButton) {
-        self.rollDice()
-    }
     
+    @IBAction func rollButtonAction(_ sender: Any) {
+        print("Agora vai porra")
+    }
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
             if(event?.subtype == UIEvent.EventSubtype.motionShake) {
+                print("Shake")
                 self.rollDice()
             }
         }
